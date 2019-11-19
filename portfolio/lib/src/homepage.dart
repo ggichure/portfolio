@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/src/appthemes.dart';
-import 'package:portfolio/src/data/projects.dart';
+import 'src.dart';
 import 'package:portfolio/src/largescreens/largescreens.dart';
 import 'dart:js' as js;
 
