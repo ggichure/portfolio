@@ -291,6 +291,19 @@ Talk to me about tech, planes,football,space and supercars.
               width: 208,
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
+          GestureDetector(
+            onTap: () {
+              js.context.callMethod("open", ["https://dev.to/ggichure"]);
+            },
+            child: Image.network(
+              "https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg",
+              height: 58,
+              width: 208,
+            ),
+          ),
           FlatButton(
             child: Text("projects"),
             onPressed: () {
