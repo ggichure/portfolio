@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/public/widgets/sidebar.dart';
 import 'package:portfolio/src/src.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Ggriffo',
       theme: ThemeData(
           primarySwatch: Colors.blueGrey, brightness: Brightness.dark),
-      home: HomePage(),
+      home: SideBarmenu(),
     );
   }
 }
