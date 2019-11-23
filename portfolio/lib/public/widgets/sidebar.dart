@@ -81,7 +81,9 @@ class SideBarmenu extends StatelessWidget {
                   children: <Widget>[
                     RawMaterialButton(
                       constraints: BoxConstraints(minWidth: 40, maxWidth: 40),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/homep");
+                      },
                       child: new Icon(
                         Icons.directions_boat,
                         color: Colors.white,

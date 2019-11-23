@@ -38,6 +38,10 @@ class _PublicHomeState extends State<PublicHome> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        label: Text("under construction"),
+        onPressed: () {},
+      ),
     );
   }
 }

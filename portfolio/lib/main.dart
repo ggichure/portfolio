@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         routes: {
           "/cards": (context) => CardsH(),
+          "/homep": (context) => HomePage(),
         },
         title: 'Ggriffo',
         theme: ThemeData(
