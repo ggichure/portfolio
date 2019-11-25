@@ -18,6 +18,6 @@ class MyApp extends StatelessWidget {
         title: 'Ggriffo',
         theme: ThemeData(
             primarySwatch: Colors.blueGrey, brightness: Brightness.dark),
-        home: PublicHome());
+        home: HomePage());
   }
 }
