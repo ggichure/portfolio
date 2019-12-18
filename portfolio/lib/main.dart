@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/public/home/publichome.dart';
-import 'package:portfolio/public/widgets/cards.dart';
-import 'package:portfolio/public/widgets/sidebar.dart';
 import 'package:portfolio/src/src.dart';
 
 void main() => runApp(MyApp());
@@ -12,7 +9,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         routes: {
-          "/cards": (context) => CardsH(),
           "/homep": (context) => HomePage(),
         },
         title: 'Ggriffo',

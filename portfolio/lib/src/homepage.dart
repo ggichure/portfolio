@@ -109,8 +109,9 @@ Talk to me about tech, planes,football,space and supercars.
               ),
               Text(
                 """
-Hi, I'm Griffins Frontend devloper.
-I make stuff happen. 
+Hi, I'm Griffins
+Frontend devloper with a passion in ML and AI .
+I make stuff happen. \n
 Talk to me about tech, planes,football,space and supercars.
 """,
                 style: AppThemeStyles.textboldHugeW,
