@@ -86,6 +86,22 @@ Talk to me about tech, planes,football,space and supercars.
                       width: 208,
                     ),
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  FloatingActionButton.extended(
+                    hoverColor: Colors.amberAccent,
+                    icon: Image.asset(
+                      "assets/gith.png",
+                      height: 50,
+                      width: 50,
+                    ),
+                    label: Text("Source Code"),
+                    onPressed: () {
+                      js.context.callMethod(
+                          "open", ["https://github.com/ggichure/portfolio"]);
+                    },
+                  ),
                 ],
               ),
             ),
