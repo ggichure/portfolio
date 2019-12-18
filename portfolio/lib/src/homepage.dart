@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/src/appthemes.dart';
-import 'src.dart';
-import 'package:portfolio/src/largescreens/largescreens.dart';
 import 'dart:js' as js;
-
 import 'package:portfolio/src/responsivewidget.dart';
 import 'package:portfolio/src/smallscreens/smallscreen.dart';
 
@@ -21,7 +18,13 @@ class _HomePageState extends State<HomePage> {
             ? smallScreen()
             : largeScreen(),
         bottomSheet: Container(
-          child: Text("Built with flutter 💓"),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("Built with flutter "),
+              FlutterLogo(),
+            ],
+          ),
         ),
       ),
     );
@@ -33,6 +36,7 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
+          padding: EdgeInsets.all(8),
           width: MediaQuery.of(context).size.width * .60,
           child: SingleChildScrollView(
             child: Center(
@@ -93,60 +97,63 @@ Talk to me about tech, planes,football,space and supercars.
 
   Widget smallScreen() {
     return SingleChildScrollView(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              """
+      child: Container(
+        padding: EdgeInsets.all(16),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                """
 Hi, I'm Griffins Frontend devloper.
 I make stuff happen. 
 Talk to me about tech, planes,football,space and supercars.
 """,
-              style: AppThemeStyles.textboldHugeW,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text("Current dev stack "),
-            currentStack(),
-            SizedBox(
-              height: 8,
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Text("Technologies I have used "),
-            SizedBox(
-              height: 8,
-            ),
-            techUsed(),
-            SizedBox(
-              height: 20,
-            ),
-            social(),
-            SizedBox(
-              height: 10,
-            ),
-            GestureDetector(
-              onTap: () {
-                js.context.callMethod("open",
-                    ["https://stackoverflow.com/users/10409567/g-griffo"]);
-              },
-              child: Image.network(
-                "https://stackexchange.com/users/flair/14410660.png",
-                height: 58,
-                width: 208,
+                style: AppThemeStyles.textboldHugeW,
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-          ],
+              SizedBox(
+                height: 20,
+              ),
+              Text("Current dev stack "),
+              currentStack(),
+              SizedBox(
+                height: 8,
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Text("Technologies I have used "),
+              SizedBox(
+                height: 8,
+              ),
+              techUsed(),
+              SizedBox(
+                height: 20,
+              ),
+              social(),
+              SizedBox(
+                height: 10,
+              ),
+              GestureDetector(
+                onTap: () {
+                  js.context.callMethod("open",
+                      ["https://stackoverflow.com/users/10409567/g-griffo"]);
+                },
+                child: Image.network(
+                  "https://stackexchange.com/users/flair/14410660.png",
+                  height: 58,
+                  width: 208,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -181,7 +188,7 @@ Talk to me about tech, planes,football,space and supercars.
         Chip(
           label: Text("Firebase"),
           shape: StadiumBorder(),
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.amberAccent,
         ),
         Chip(
           label: Text("Node Js"),
