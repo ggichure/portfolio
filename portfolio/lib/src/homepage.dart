@@ -57,7 +57,7 @@ Talk to me about tech, planes,football,space and supercars.
                   SizedBox(
                     height: 20,
                   ),
-                  Text("Current dev stack "),
+                  Text("Current dev stack  "),
                   SizedBox(
                     height: 8,
                   ),
@@ -230,7 +230,7 @@ Talk to me about tech, planes,football,space and supercars.
         Chip(
           label: Text("Java"),
           shape: StadiumBorder(),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.lightBlueAccent,
         ),
         Chip(
           label: Text("Python"),
@@ -246,6 +246,16 @@ Talk to me about tech, planes,football,space and supercars.
           label: Text("Tensor Flow"),
           shape: StadiumBorder(),
           backgroundColor: Colors.deepOrange,
+        ),
+        Chip(
+          label: Text("GCP"),
+          shape: StadiumBorder(),
+          backgroundColor: Colors.orangeAccent,
+        ),
+        Chip(
+          label: Text(" OpenVINO"),
+          shape: StadiumBorder(),
+          backgroundColor: Colors.blue[200],
         ),
       ],
     );
