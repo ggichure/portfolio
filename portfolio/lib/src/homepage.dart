@@ -37,73 +37,89 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         Container(
           padding: EdgeInsets.all(8),
-          width: MediaQuery.of(context).size.width * .60,
+          width: MediaQuery.of(context).size.width * .70,
           child: SingleChildScrollView(
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    """
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      width: MediaQuery.of(context).size.width * .8,
+                      child: Text(
+                        """
 Hi, I'm Griffins
 Frontend devloper with a passion in ML and AI .
 I make stuff happen. \n
 Talk to me about tech, planes,football,space and supercars.
 """,
-                    style: AppThemeStyles.textboldHugeW,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text("Current dev stack  "),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  currentStack(),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  Text("Technologies I have used "),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  techUsed(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  social(),
-                  GestureDetector(
-                    onTap: () {
-                      js.context.callMethod("open", [
-                        "https://stackoverflow.com/users/10409567/g-griffo"
-                      ]);
-                    },
-                    child: Image.network(
-                      "https://stackexchange.com/users/flair/14410660.png",
-                      height: 58,
-                      width: 208,
+                        style: AppThemeStyles.textboldHugeW,
+                      ),
                     ),
+                  ],
+                ),
+                Center(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text("Current dev stack  "),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      currentStack(),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Technologies I have used "),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      techUsed(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      social(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          js.context.callMethod("open", [
+                            "https://stackoverflow.com/users/10409567/g-griffo"
+                          ]);
+                        },
+                        child: Image.network(
+                          "https://stackexchange.com/users/flair/14410660.png",
+                          height: 58,
+                          width: 208,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      FloatingActionButton.extended(
+                        hoverColor: Colors.amberAccent,
+                        icon: Image.asset(
+                          "assets/gith.png",
+                          height: 50,
+                          width: 50,
+                        ),
+                        label: Text("Source Code"),
+                        onPressed: () {
+                          js.context.callMethod("open",
+                              ["https://github.com/ggichure/portfolio"]);
+                        },
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  FloatingActionButton.extended(
-                    hoverColor: Colors.amberAccent,
-                    icon: Image.asset(
-                      "assets/gith.png",
-                      height: 50,
-                      width: 50,
-                    ),
-                    label: Text("Source Code"),
-                    onPressed: () {
-                      js.context.callMethod(
-                          "open", ["https://github.com/ggichure/portfolio"]);
-                    },
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
@@ -165,6 +181,22 @@ Talk to me about tech, planes,football,space and supercars.
                   height: 58,
                   width: 208,
                 ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              FloatingActionButton.extended(
+                hoverColor: Colors.amberAccent,
+                icon: Image.asset(
+                  "assets/gith.png",
+                  height: 50,
+                  width: 50,
+                ),
+                label: Text("Source Code"),
+                onPressed: () {
+                  js.context.callMethod(
+                      "open", ["https://github.com/ggichure/portfolio"]);
+                },
               ),
               SizedBox(
                 height: 10,
@@ -294,6 +326,14 @@ Talk to me about tech, planes,football,space and supercars.
           shape: StadiumBorder(),
         ),
         Chip(
+          label: Text("Bootsrap"),
+          shape: StadiumBorder(),
+        ),
+        Chip(
+          label: Text("Wordpress"),
+          shape: StadiumBorder(),
+        ),
+        Chip(
           label: Text("e.t.c"),
           shape: StadiumBorder(),
         ),
@@ -331,7 +371,7 @@ Talk to me about tech, planes,football,space and supercars.
 
   Widget social() {
     return Wrap(
-      spacing: 4,
+      spacing: 5,
       children: <Widget>[
         GestureDetector(
           onTap: () {
