@@ -48,6 +48,9 @@ flutter:
     - assets/rocket.png
     - assets/midr.png
     - assets/tl.png
+    - assets/1.png
+    - assets/2.jpg
+    - assets/3.jpg
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
